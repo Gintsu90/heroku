@@ -84,6 +84,11 @@ const App = () => {
             setMessage(null)
           }, 3000)
         })
+        .catch(error => {
+          console.log("ERROR", error.response.data);
+          setMessage(error.response.data.error);
+          
+        })
     }
   }
 
